@@ -5,22 +5,27 @@ body {
 
 h1 {
     text-align: center;
-    margin: 50px;
+    margin: 30px;
 }
 
 .upper {
-    height: 50px;
+    height: 45px;
+    width: 315px;
     background-color: rgb(49, 158, 87);
+    margin: 0 auto;
+    margin-bottom: 10px;
+
 }
 
 .upper span {
     display: inline-block;
-    height: 30px;
-    width: 30%;
+    margin-left: 30px;
     padding: 5px;
+    height: 30px;
+    width: 150;
     text-align: center;
     text-decoration-color: azure;
-    
+
 }
 
 table {
@@ -34,7 +39,17 @@ table {
 
 td {
     padding: .5em;
-    border: 1px solid lightgrey;
+    border: 2px solid rgb(41, 97, 70);
     height: 50px;
     width: 50px;
+}
+
+td:hover {
+    color: rgb(190, 237, 226);
+}
+
+img{
+    width: 30px;
+    padding-left: 10px; 
+    display: none; 
 }

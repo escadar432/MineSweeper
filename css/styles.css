@@ -9,23 +9,25 @@ h1 {
 }
 
 .upper {
-    height: 45px;
-    width: 315px;
+    /* height: 50px;
+    width: 400px; */
     background-color: rgb(49, 158, 87);
-    margin: 0 auto;
-    margin-bottom: 10px;
-
+    margin: 15px;
+   
 }
 
 .upper span {
     display: inline-block;
+    /* height: 30px;
+    width: 30%;
+    */
     margin-left: 30px;
     padding: 5px;
     height: 30px;
     width: 150;
     text-align: center;
     text-decoration-color: azure;
-
+    
 }
 
 table {
@@ -46,10 +48,4 @@ td {
 
 td:hover {
     color: rgb(190, 237, 226);
-}
-
-img{
-    width: 30px;
-    padding-left: 10px; 
-    display: none; 
-}
+  }

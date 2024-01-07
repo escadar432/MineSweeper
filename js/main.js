@@ -18,12 +18,10 @@ var gGame = {
     markedCount: 0,
     secsPassed: 0
 }
-const MINE_IMG ='<img src="img/bomb.png">'
-
+const MINE = `&#xf1e2;`
 
 function init() {
     console.log("hiii")
-
     gBoard = buildBoard()
     setMinesNegsCount(gBoard)
     renderBoard(gBoard)
@@ -44,7 +42,7 @@ function buildBoard() {
 function setMinesNegsCount(board) {
 
     for (var i = 0; i < board.length; i++) {
-        for (var j = 0; j < board[0].length; j++) {
+        for (var j = 0; j < board.length; j++) {
         }
     }
     board[0][0] = {
@@ -68,33 +66,29 @@ function setMinesNegsCount(board) {
 }
 
 function renderBoard(board) {
+    var strHtml = ''
     const elBoard = document.querySelector('.board')
-	var strHTML = ''
-	for (var i = 0; i < board.length; i++) {
-		strHTML += '<tr>\n'
-		for (var j = 0; j < board[0].length; j++) {
-			const currCell = board[i][j]
-            console.log(currCell);
 
-			var elCell = getClassName({ i, j })
+    for (var i = 0; i < board.length; i++) {
+        strHtml += '<tr>\n'
 
-			strHTML += `\t<td class="cell ${elCell}" onclick="onCellClicked(${currCell.isMine})">`
+        for (let j = 0; j < board[0].length; j++) {
+            const currCell = board[i][j]
+            var cellClass = getClassName({ i, j })
 
-			if (currCell.isMine) {
-				strHTML += MINE_IMG
-			} 
+            strHtml += `\t<td class="cell ${cellClass}" onclick="clickedCell(${i},${j})">`
+        }
+        strHtml += '</tr>\n'
 
-			strHTML += '</td>\n'
-		}
-		strHTML += '</tr>\n'
-	}
-	elBoard.innerHTML = strHTML
+        elBoard.innerHTML = strHtml
+
+
+    }
 
 
 }
 
-function onCellClicked(elCell) {
-console.log(elCell);
+function onCellClicked(elCell, i, j) {
 
 }
 
